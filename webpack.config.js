@@ -38,6 +38,17 @@ module.exports = {
           'stylus-loader',
         ],
       },
+      {
+        test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 1000,
+            name: '[hash].[ext]',
+            outputPath: 'assets',
+          },
+        },
+      },
     ],
   },
   plugins: [

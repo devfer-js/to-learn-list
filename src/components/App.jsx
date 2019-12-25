@@ -1,6 +1,17 @@
-import React from 'react';
-import '../styles/components/App.styl';
+import React, { useState } from 'react';
+import '../styles/components/App.css';
+import Form from './Form';
+import ListTodos from './ListTodos';
 
-const App = () => <h1>Hello React!</h1>;
-
+const App = () => {
+  const [tareas, setTareas] = useState([]);
+  return (
+    <div className="app">
+      <div className="app__container">
+        <Form tareas={tareas} setTareas={setTareas} />
+        <ListTodos tareas={tareas} setTareas={setTareas} />
+      </div>
+    </div>
+  );
+};
 export default App;
