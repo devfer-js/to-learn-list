@@ -4,7 +4,8 @@ import Form from './Form';
 import ListTodos from './ListTodos';
 
 const App = () => {
-  const [tareas, setTareas] = useState([]);
+  const [tareas, setTareas] = useState<Array<string>>([]);
+
   return (
     <div className="app">
       <div className="app__container">
